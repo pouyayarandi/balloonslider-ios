@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BalloonSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9xg-Yc-j0h">
+                                <rect key="frame" x="28" y="318.5" width="319" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.3411764705882353" green="0.15294117647058825" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ZWX-wg-f17"/>
+                                    <action selector="sliderTouchUp:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="ck7-15-BjM"/>
+                                    <action selector="sliderTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lH7-pd-IX8"/>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GgG-eK-AlB"/>
+                                </connections>
+                            </slider>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVo-ag-ADe">
+                                <rect key="frame" x="15" y="248.5" width="60" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="opf-FV-I17">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XM-mU-STk">
+                                        <rect key="frame" x="26" y="13" width="8" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="opf-FV-I17" firstAttribute="leading" secondItem="hVo-ag-ADe" secondAttribute="leading" id="2VG-oX-UeJ"/>
+                                    <constraint firstItem="9XM-mU-STk" firstAttribute="centerX" secondItem="hVo-ag-ADe" secondAttribute="centerX" id="7Pl-2W-Z1x"/>
+                                    <constraint firstItem="opf-FV-I17" firstAttribute="top" secondItem="hVo-ag-ADe" secondAttribute="top" id="GTX-a4-U0L"/>
+                                    <constraint firstItem="9XM-mU-STk" firstAttribute="centerY" secondItem="hVo-ag-ADe" secondAttribute="centerY" constant="-10" id="KNq-L1-BE3"/>
+                                    <constraint firstAttribute="height" constant="60" id="bmz-Kw-YFk"/>
+                                    <constraint firstAttribute="trailing" secondItem="opf-FV-I17" secondAttribute="trailing" id="qaf-2f-dNb"/>
+                                    <constraint firstAttribute="width" constant="60" id="sUr-Eg-Yln"/>
+                                    <constraint firstAttribute="bottom" secondItem="opf-FV-I17" secondAttribute="bottom" id="zyJ-K5-7Tq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hVo-ag-ADe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="SsV-fI-r9c"/>
+                            <constraint firstItem="9xg-Yc-j0h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Y8q-N8-Gw8"/>
+                            <constraint firstItem="9xg-Yc-j0h" firstAttribute="top" secondItem="hVo-ag-ADe" secondAttribute="bottom" constant="10" id="Yt4-fo-Rxn"/>
+                            <constraint firstItem="9xg-Yc-j0h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oKl-kT-Z1H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9xg-Yc-j0h" secondAttribute="trailing" constant="30" id="veG-t0-Lmb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="balloonView" destination="hVo-ag-ADe" id="RGg-QH-her"/>
+                        <outlet property="balloonViewLeading" destination="SsV-fI-r9c" id="ybd-JY-iU3"/>
+                        <outlet property="slider" destination="9xg-Yc-j0h" id="H40-C9-d0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="balloon" width="36" height="51"/>
+    </resources>
+</document>

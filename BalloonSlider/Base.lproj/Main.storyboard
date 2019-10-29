@@ -41,7 +41,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="opf-FV-I17" firstAttribute="leading" secondItem="hVo-ag-ADe" secondAttribute="leading" id="2VG-oX-UeJ"/>
                                     <constraint firstItem="9XM-mU-STk" firstAttribute="centerX" secondItem="hVo-ag-ADe" secondAttribute="centerX" id="7Pl-2W-Z1x"/>
@@ -67,6 +67,7 @@
                     <connections>
                         <outlet property="balloonView" destination="hVo-ag-ADe" id="RGg-QH-her"/>
                         <outlet property="balloonViewLeading" destination="SsV-fI-r9c" id="ybd-JY-iU3"/>
+                        <outlet property="numberLabel" destination="9XM-mU-STk" id="Bqw-hN-AOM"/>
                         <outlet property="slider" destination="9xg-Yc-j0h" id="H40-C9-d0h"/>
                     </connections>
                 </viewController>
